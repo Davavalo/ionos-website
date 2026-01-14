@@ -548,7 +548,7 @@ button:focus-visible {
   background-color: var(--softnoir);
   justify-content: center;
   align-items: center;
-  z-index: 1200;
+  z-index: 1001;
 }
 
 .lightbox-full {
