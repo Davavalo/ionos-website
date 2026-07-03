@@ -2,7 +2,7 @@ document.addEventListener("DOMContentLoaded", () => {
   const normalize = (path) => path.replace(/\/index\.html$/, "") || "/";
   const currentPath = normalize(window.location.pathname);
 
-  fetch("header")
+  fetch("header.html")
     .then((res) => res.text())
     .then((html) => {
       const header = document.getElementById("header");
@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       // Highlight active nav link
       header.querySelectorAll(".menu a").forEach((link) => {
         const linkPath = normalize(
-          new URL(link.href, location.origin).pathname
+          new URL(link.href, location.origin).pathname,
         );
         if (linkPath === currentPath) {
           link.classList.add("active");
@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     })
     .catch((err) => console.error("Header load failed:", err));
 
-  fetch("footer")
+  fetch("footer.html")
     .then((res) => res.text())
     .then((html) => {
       const footer = document.getElementById("footer");
