@@ -107,12 +107,6 @@ li {
   margin: 0 auto;
 }
 
-.full-width {
-  width: 100%;
-  background-color: var(--charcoal);
-  color: var(--accent);
-}
-
 /* ===================================
    Accent Colors
    =================================== */
@@ -150,6 +144,7 @@ button:focus-visible {
   align-items: center;
   height: 64px;
   justify-content: space-between;
+  border-bottom: 1px solid var(--softnoir);
 }
 
 .site-title {
@@ -343,53 +338,54 @@ button:focus-visible {
 /* ===================================
    SPLASH SECTION
    =================================== */
+
 .splash-content {
   display: flex;
   flex-direction: column;
   justify-content: center;
 }
 
+.eyebrow {
+  font-size: clamp(0.95rem, 0.9rem + 0.4vw, 1.25rem);
+  font-weight: 500;
+  color: rgba(230, 229, 225, 0.7);
+}
+
 .splash-content h1 {
+  font-size: clamp(1.75rem, 1rem + 3.75vw, 4.75rem);
+  font-weight: 600;
+  line-height: 1.15;
+  letter-spacing: 0.05rem;
   color: var(--accent);
 }
 
-.splash-content img {
-  display: block;
-  width: 100%;
-  object-fit: cover;
-  border-radius: 12px;
+.accent-color {
+  color: var(--primary);
 }
 
 .splash-button {
-  display: inline-block;
-  margin-top: 1.5rem;
-  padding: 1rem 1.5rem;
-  color: var(--accent);
-  font-weight: 600;
-  text-decoration: none;
-  border: none;
-  border-radius: 8px;
-  cursor: pointer;
-  width: 100%;
-  max-width: 150px;
-  text-align: center;
-  transition:
-    transform 0.25s ease,
-    box-shadow 0.25s ease,
-    opacity 0.2s ease;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+
+  width: fit-content;
+
+  padding: 1rem 1.75rem;
+
   border: 2px solid var(--primary);
+  border-radius: 8px;
+
+  color: var(--accent);
+  text-decoration: none;
+  font-weight: 600;
+
+  transition: all 0.25s ease;
 }
 
 .splash-button:hover {
-  color: var(--accent);
-  opacity: 0.85;
   transform: translateY(-4px);
-  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.12);
-}
-
-.splash-button:focus-visible {
-  outline: 2px solid var(--accent);
-  outline-offset: 4px;
+  background: var(--primary);
+  color: var(--charcoal);
 }
 
 /* ===================================
