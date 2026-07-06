@@ -144,4 +144,21 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     }
   });
+  // Back to Top Button
+  const btn = document.getElementById("backToTop");
+  const showAfter = 400;
+
+  if (btn) {
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > showAfter) {
+        btn.classList.add("visible");
+      } else {
+        btn.classList.remove("visible");
+      }
+    });
+
+    btn.addEventListener("click", () => {
+      window.scrollTo({ top: 0, behavior: "smooth" });
+    });
+  }
 });
