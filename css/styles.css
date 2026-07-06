@@ -79,9 +79,9 @@ h4 {
 }
 
 p {
-  font-size: clamp(1rem, 1.69rem + 0.25vw, 1.125rem);
+  font-size: clamp(1rem, 0.95rem + 0.3vw, 1.125rem);
   letter-spacing: 0.025rem;
-  line-height: 1.75em;
+  line-height: 1.6em;
   color: var(--accent);
 }
 
@@ -370,7 +370,7 @@ button:focus-visible {
 
   width: fit-content;
 
-  padding: 1rem 1.75rem;
+  padding: 1rem 1.5rem;
 
   border: 2px solid var(--primary);
   border-radius: 8px;
@@ -667,6 +667,10 @@ button:focus-visible {
 
 .footer-content {
   text-align: center;
+}
+
+.footer-content p {
+  font-size: clamp(0.9375rem, 0.9rem + 0.2vw, 1rem);
 }
 
 /* ===================================
